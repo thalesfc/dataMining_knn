@@ -1,3 +1,0 @@
-Loading Stop words
-Loading train
-[ 1.  0.  0. ...,  0.  0.  0.]

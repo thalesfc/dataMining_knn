@@ -4,6 +4,7 @@ import space
 import scipy.spatial.distance as spd
 import heapq
 import numpy as np
+from sys import stderr
 
 
 def main():
@@ -27,8 +28,9 @@ def main():
                                     parser.test_path)
 
     # output file
-    out_file = open('../results/' + parser.distance + '_' + str(parser.k)
-                    + '.txt', 'w')
+    out_path = '../results/' + parser.distance + '_' + str(parser.k)
+    out_path += '.txt'
+    out_file = open(out_path, 'w')
 
     # knn classification
     print "# Classifying"
@@ -45,6 +47,17 @@ def main():
                 distance = spd.cosine(item, point)
             elif parser.distance == 'jaccard':
                 distance = spd.jaccard(item, point)
+            elif parser.distance == 'euclidean':
+                distance = spd.euclidean(item, point)
+            elif parser.distance == 'dice':
+                distance = spd.dice(item, point)
+            elif parser.distance == 'correlation':
+                distance = spd.correlation(item, point)
+            elif parser.distance == 'manhattan':
+                distance = spd.cityblock(item, point)
+            else:
+                print >> stderr, "ERRO! -  Distância informada inválida."
+                exit()
 
             tup = (distance, i)
             heapq.heappush(dist_heap, tup)
@@ -63,6 +76,7 @@ def main():
             print >> out_file, '0'
         else:
             print >> out_file, '1'
+    print "# Resultados salvos no arquivo: " + out_path
 
 if __name__ == '__main__':
     main()
