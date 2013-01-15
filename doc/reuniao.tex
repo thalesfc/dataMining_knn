@@ -1,0 +1,49 @@
+\documentclass[a4paper, 11 pt, onecolumn]{article}   % list options between brackets
+\usepackage{graphicx, url}              % list packages between braces
+
+\usepackage{enumerate}
+
+
+\usepackage{fancyvrb}
+\usepackage{amssymb,amsmath}
+%\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel} 
+
+% type user-defined commands here
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\barra}{\\[0.5cm]}
+
+\hyphenation{ne-ga-ti-va}
+
+\begin{document}
+
+\title{Mineração de Dados - tp 3\\ KNN}   % type title between braces
+\author{Thales Filizola Costa\\ \scriptsize{\textit{thalesfc@dcc.ufmg.br}}}         % type author(s) between braces
+\date{\today \\ \HRule}    % type date between braces
+\maketitle
+
+\section{Introdução}
+A seção \ref{basededados} retrata a base de dados utilizada neste trabalho, tendo como foco a análise de stemming e de retirada de stopwords e relacionando os mesmos com os efeitos na acurácia e na performance do algoritmo. 
+
+ 
+\section{Base de Dados}
+\label{basededados}
+A base de dados utilizada consiste em \textit{reviews} de usuários para filmes. Para cada \textit{review} são fornecidos o comentário e a classificação do comentário, que pode ser positiva (1) ou negativa (0).
+
+\subsection{Vocabulário}
+
+Nessa subseção queremos determinar se vamos utilizar ou não \textit{stemming} e se vamos retirar ou não \textit{stopwords} para os próximos experimentos. 
+
+A tabela \ref{tab:string} apresenta as diferentes configurações que foram executadas. Nesses experimentos, o número de vizinhos utilizados foi dez (\texttt{k=10}) e a distância entre os pontos foi calculada utilizando a distância euclideana (\texttt{d=euclidean}).
+
+
+%%  --------------- end of document
+\nocite{meira}
+\nocite{urlMetrics}
+
+\bibliographystyle{plain}
+\bibliography{reuniao}
+
+\end{document}

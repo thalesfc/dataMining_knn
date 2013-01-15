@@ -1,0 +1,44 @@
+\documentclass[a4wide, 11 pt, onecolumn]{article}   % list options between brackets
+\usepackage{graphicx, url}              % list packages between braces
+
+\usepackage{enumerate}
+
+
+\usepackage{fancyvrb}
+\usepackage{amssymb,amsmath}
+%\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel} 
+
+% type user-defined commands here
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\barra}{\\[0.5cm]}
+
+
+\begin{document}
+
+\title{Mineração de Dados - tp 3\\ KNN}   % type title between braces
+\author{Thales Filizola Costa\\ \scriptsize{\textit{thalesfc@dcc.ufmg.br}}}         % type author(s) between braces
+\date{\today \\ \HRule}    % type date between braces
+\maketitle
+
+\section{Introdução}
+
+A seção \ref{basededados} retrata a  base de dados utilizada neste trabalho, tendo como foco a análise de stemming e de retirada de stopwords, em relação aos efeitos na acurácia e na performance do algoritmo.
+ 
+\section{Base de Dados}
+\label{basededados}
+Para a realização deste trabalho prático, foi fornecida uma base de dados com \textit{reviews} dado a diferente filmes. Para cada \textit{review} são fornecidos: (i) a classificação do comentário, i.e. positiva 1 ou negativa 0, e (ii) o comentário feito pelo usuário.
+
+\subsection{Vocabulário}
+
+
+%%  --------------- end of document
+\nocite{meira}
+\nocite{urlMetrics}
+
+\bibliographystyle{plain}
+\bibliography{reuniao}
+
+\end{document}

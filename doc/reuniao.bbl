@@ -1,0 +1,17 @@
+\begin{thebibliography}{1}
+
+\bibitem{urlMetrics}
+Michael Hahsler.
+\newblock {A Comparison of Commonly Used Interest Measures for Association
+  Rules}.
+\newblock
+  \url{http://michael.hahsler.net/research/association_rules/measures.html},
+  2011.
+\newblock [Online; accessed 13-October-2012].
+
+\bibitem{meira}
+Mohammed Zaki and Wagner~Meira Jr.
+\newblock {\em Fundamentals of Data Mining Algorithms}.
+\newblock Cambridge University Press, 2010.
+
+\end{thebibliography}
