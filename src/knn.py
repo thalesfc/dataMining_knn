@@ -5,6 +5,7 @@ import scipy.spatial.distance as spd
 import heapq
 import numpy as np
 from sys import stderr
+from time import clock
 
 
 def main():
@@ -16,12 +17,13 @@ def main():
         stopwords = ld.load_stopwords(parser.stopwords_path)
 
     # priting args
-    print "Args: \n"
-    print '-k = ' + str(parser.k)
-    print '-d = ' + parser.distance
+    print '\t-k = ' + str(parser.k)
+    print '\t-d = ' + parser.distance
 
     # loading the necessary data
     (vocabulary, neigh_classes) = ld.load_train(parser.train_path, stopwords)
+
+    print "# Tamanho do vocabulário:", len(vocabulary)
 
     # transforming each item to a v-dimensional space
     (train, test) = space.transform(vocabulary, parser.train_path,
@@ -76,7 +78,12 @@ def main():
             print >> out_file, '0'
         else:
             print >> out_file, '1'
+
+    print
     print "# Resultados salvos no arquivo: " + out_path
 
 if __name__ == '__main__':
+    t1 = clock()
     main()
+    t2 = clock()
+    print (t2 - t1)
