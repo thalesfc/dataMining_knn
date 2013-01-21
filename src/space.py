@@ -4,9 +4,8 @@ import re
 import numpy as np
 
 
-def transform(voc, train_p, test_p):
-    ''' Transform the itens to a v-dimensional space '''
-
+def train_transform(voc, train_p):
+    ''' Transform the train to a v-dimensional space '''
     # transforming the train
     train = []
     f = open(train_p)
@@ -22,6 +21,14 @@ def transform(voc, train_p, test_p):
                 space[word_id] += 1
 
         train.append(space)
+    return train
+
+
+def transform(voc, train_p, test_p):
+    ''' Transform the itens to a v-dimensional space '''
+
+    # transforming the train
+    train = train_transform(voc, train_p)
 
     # test
     test = []

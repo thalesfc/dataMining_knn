@@ -62,7 +62,6 @@ def load_train(path, stopwords):
     ''' Load the train information '''
     print "\n# Loading train"
 
-    nei_class = []
     voc = {}
     f = open(path)
 
@@ -88,12 +87,13 @@ def load_train(path, stopwords):
                 voc[word] = count
                 count += 1
 
+    nei_class = []
     # loading the answers
     f = open(path)
     count = 0
     for line in f:
         tokens = line.split(' ')
-        classe = tokens[0]
+        classe = int(tokens[0])
         nei_class.append(classe)
 
     return (voc, nei_class)

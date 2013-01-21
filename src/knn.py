@@ -6,6 +6,7 @@ import heapq
 import numpy as np
 from sys import stderr
 from time import clock
+import result
 
 
 def main():
@@ -37,7 +38,6 @@ def main():
     # knn classification
     print "# Classifying"
     for item in test:
-        print "*",
         dist_heap = []
 
         # calculates the distance to every point in the training set
@@ -73,17 +73,24 @@ def main():
             classe = neigh_classes[idi]
             classification[int(classe)] += 1
 
+        # DEBUG
+        print classification,
+
         # outputing classification
         if(classification[0] >= classification[1]):
             print >> out_file, '0'
+            print '0'
         else:
             print >> out_file, '1'
+            print '1'
 
     print
     print "# Resultados salvos no arquivo: " + out_path
+    out_file.close()
+    result.result("../data/imdb_test", out_path)
 
 if __name__ == '__main__':
     t1 = clock()
     main()
     t2 = clock()
-    print (t2 - t1)
+    print "# Tempo de execução", (t2 - t1), "s"
