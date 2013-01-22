@@ -65,7 +65,7 @@ def main():
             heapq.heappush(dist_heap, tup)
 
         # return the highest k similar points
-        top_k = heapq.nlargest(parser.k, dist_heap)
+        top_k = heapq.nsmallest(parser.k, dist_heap)
 
         # classifing
         classification = np.zeros(2)

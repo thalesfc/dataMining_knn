@@ -28,7 +28,6 @@ def main():
     acc = 0
 
     for x in xrange(len(train)):
-        print x
         dist_heap = []
         item = train[x]
         for i in xrange(len(train)):
@@ -42,7 +41,7 @@ def main():
             heapq.heappush(dist_heap, tup)
 
         # return the highest k similar points
-        top_k = heapq.nlargest(parser.k, dist_heap)
+        top_k = heapq.nsmallest(parser.k, dist_heap)
 
         # classifing
         classification = np.zeros(2)
@@ -55,6 +54,8 @@ def main():
             out_class = 0
         else:
             out_class = 1
+
+        print x, " -> ", out_class, neigh_classes[x]
 
         # increment the acc
         if out_class == neigh_classes[x]:

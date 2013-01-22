@@ -41,7 +41,7 @@ def parse_arguments():
         parser.error('Arquivo de treino não fornecido.')
 
     if not options.distance:
-        options.distance = 'cosine'
+        options.distance = 'euclidean'
 
     return options
 
