@@ -10,12 +10,15 @@ def parse_arguments():
     '''parse the arguments provided in the command line'''
 
     usage_text = 'Usage: %progi -i <arquivo treino> -t <arquivo teste>'
-    usage_text += '-k <número de vizinhos> [-s stopwords -d distance]'
+    usage_text += ' -k <número de vizinhos> [-s stopwords -d distance -m porcentagem]'
 
     parser = OptionParser(usage=usage_text)
 
     parser.add_option('-k', '--k_num', type='int',
                       help='número de neighboors', dest='k')
+
+    parser.add_option('-m', '--max', type='float',
+                      help='porcentagem da base a ser utilizada', dest='percentage')
 
     parser.add_option('-i', '--treino', type='string',
                       help='arquivo treino', dest='train_path')
@@ -42,6 +45,9 @@ def parse_arguments():
 
     if not options.distance:
         options.distance = 'euclidean'
+
+    if not options.percentage:
+        options.percentage = 1
 
     return options
 

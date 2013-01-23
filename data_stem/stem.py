@@ -4,7 +4,7 @@ from sys import argv
 
 if len(argv) != 2:
     print "Usage: <file-to-stem>"
-    exit
+    exit()
 
 #print "# Stemming the file: ", argv[1]
 

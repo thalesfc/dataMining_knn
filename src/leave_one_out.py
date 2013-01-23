@@ -35,7 +35,7 @@ def main():
             if x == i:
                 continue
             point = train[i]
-            distance = spd.jaccard(item, point)
+            distance = spd.euclidean(item, point)
 
             tup = (distance, i)
             heapq.heappush(dist_heap, tup)

@@ -31,17 +31,17 @@ def main():
                                     parser.test_path)
 
     # output file
-    out_path = '../results/' + parser.distance + '_' + str(parser.k)
+    out_path = parser.distance + '_' + str(parser.k)
     out_path += '.txt'
     out_file = open(out_path, 'w')
 
     # knn classification
-    print "# Classifying"
+    print "# Classifying", len(train) * parser.percentage
     for item in test:
         dist_heap = []
 
         # calculates the distance to every point in the training set
-        for i in xrange(len(train)):
+        for i in xrange(int(len(train) * parser.percentage)):
             point = train[i]
             distance = 0.0
 
@@ -51,8 +51,8 @@ def main():
                 distance = spd.jaccard(item, point)
             elif parser.distance == 'euclidean':
                 distance = spd.euclidean(item, point)
-            elif parser.distance == 'dice':
-                distance = spd.dice(item, point)
+            elif parser.distance == 'hamming':
+                distance = spd.hamming(item, point)
             elif parser.distance == 'correlation':
                 distance = spd.correlation(item, point)
             elif parser.distance == 'manhattan':

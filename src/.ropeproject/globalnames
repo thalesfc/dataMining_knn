@@ -1,3 +1,3 @@
-€}q(Uknnq]q(Ut2qUt1qUmainqeU	load_dataq]q(Usplit_regexq	Uparse_argumentsq
-Uload_stopwordsqU
-load_trainqeUresultq]q(UcountqUaccqUclassificationqUfUiUclasseqUtokensqUanswerqUlineqeu.
+€}q(Uknn]q(Ut2qUt1qUmainqeUspace]q(Utrain_transformqU	transformqUextract_termsq	eU	load_data]q
+(Usplit_regexqUparse_argumentsqUload_stopwordsqU
+load_trainqeUleave_one_out]q(Ut2qUt1qUmainqeUresult]qUresultqaUnew_knn]q(Uload_vocabularyqUtokenize_lineqUt1qUt2qU	transformqUload_answersqUmainqeu.
