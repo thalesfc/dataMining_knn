@@ -1,0 +1,6 @@
+euclidean  0.65
+jaccard  0.6875
+cosine 0.605
+hamming 0.505
+correlation 0.565
+manhattan 0.58

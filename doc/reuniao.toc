@@ -1,0 +1,17 @@
+\select@language {brazilian}
+\contentsline {section}{\numberline {1}INTRODU\IeC {\c C}\IeC {\~A}O}{2}
+\contentsline {section}{\numberline {2}ALGORITMO DE \textit {K-NEAREST NEIGHBOR}}{2}
+\contentsline {subsection}{\numberline {2.1}Descri\IeC {\c c}\IeC {\~a}o}{2}
+\contentsline {paragraph}{Algoritmo de kNN:}{2}
+\contentsline {subsection}{\numberline {2.2}Complexidade}{3}
+\contentsline {section}{\numberline {3}M\IeC {\'A}QUINA DE TESTE}{3}
+\contentsline {section}{\numberline {4}BASE DE DADOS}{3}
+\contentsline {subsection}{\numberline {4.1}Vocabul\IeC {\'a}rio}{3}
+\contentsline {subsection}{\numberline {4.2}Distribui\IeC {\c c}\IeC {\~a}o das classes}{4}
+\contentsline {section}{\numberline {5}SELECIONANDO O VALOR DE K}{5}
+\contentsline {subsection}{\numberline {5.1}Leave-one-out}{5}
+\contentsline {subsection}{\numberline {5.2}Resultados}{5}
+\contentsline {section}{\numberline {6}EXPERIMENTOS}{7}
+\contentsline {subsection}{\numberline {6.1}M\IeC {\'e}tricas de Dist\IeC {\^a}ncias}{7}
+\contentsline {subsection}{\numberline {6.2}Varia\IeC {\c c}a\IeC {\~o} no Tamanho de Entrada}{8}
+\contentsline {section}{\numberline {7}CONCLUS\IeC {\~A}O}{10}
